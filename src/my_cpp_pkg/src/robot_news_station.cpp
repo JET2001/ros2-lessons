@@ -6,7 +6,7 @@ class RobotNewsStation : public rclcpp::Node // MODIFY NAME
 public:
     RobotNewsStation() : Node("RobotNewsStation") // MODIFY NAME
     {
-        publisher_ = this->create_publisher<example_interfaces::msg::String>("robot_news_cpp", 10);
+        publisher_ = this->create_publisher<example_interfaces::msg::String>("robot_news", 10);
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(500),
             std::bind(&RobotNewsStation::timerCallback, this)

@@ -6,7 +6,7 @@ public:
     SmartphoneNode() : Node("smartphone") // MODIFY NAME
     {
         subscriber_ = this->create_subscription<example_interfaces::msg::String>(
-            "robot_news_cpp", 10, 
+            "robot_news", 10, 
             std::bind(
                 &SmartphoneNode::callbackRobotNewsCPP, // callback
                 this, // bind to this object
