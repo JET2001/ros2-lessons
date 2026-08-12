@@ -35,6 +35,15 @@ ament_target_dependencies(robot_news_station example_interfaces)
 add_executable(smartphone src/smartphone.cpp)
 ament_target_dependencies(smartphone rclcpp)
 ament_target_dependencies(smartphone example_interfaces)
+
+
+add_executable(number_counter src/number_counter.cpp)
+ament_target_dependencies(number_counter rclcpp)
+ament_target_dependencies(number_counter example_interfaces)
+
+add_executable(number_publisher src/number_publisher.cpp)
+ament_target_dependencies(number_publisher rclcpp)
+ament_target_dependencies(number_publisher example_interfaces)
 # for every new node we create, duplicate these two lines.
 
 
@@ -43,6 +52,8 @@ install(TARGETS
   cpp_node
   robot_news_station
   smartphone
+  number_counter
+  number_publisher
   DESTINATION lib/${PROJECT_NAME}
 )
 
